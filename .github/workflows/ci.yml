@@ -29,6 +29,6 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME}}
         password: ${{ secrets.DOCKERHUB_TOKEN}}
 
-      name: Push docker image
+    - name: Push docker image
       run: |
         docker push samuelgalante/nlw_devops:${{ steps.generate_sha.outputs.sha }}
